@@ -2,8 +2,33 @@
 <html>
 	<head>
 		<title>Employee Details</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"/>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/script.js"></script>
 	</head>
 	<body>
-		<h1>Hello World!</h1>
+		<div class="container" ng-app="myApp" ng-controller="myCtrl">
+			<div class="row">
+				<table class="table">
+					<thead>
+						<tr>
+							<th>FirstName</th>
+							<th>LastName</th>
+							<th>Action</th>
+						</tr>
+					</thead>
+					<tbody>
+						<form ng-submit="submitForm()">
+							<tr>
+								<td><input type="text" id="firstname" ng-model="user.firstName"/></td>
+								<td><input type="text" id="lastname" ng-model="user.lastName"/></td>
+								<td><input type="submit" id="btn" class="btn btn-primary" value="Submit"/></td>
+							</tr>
+						</form>
+					</tbody>
+				</table>
+			</div>
+		</div>
 	</body>
 </html>
